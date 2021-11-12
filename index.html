@@ -39,11 +39,11 @@
                 if(img == -1) {
                     img=4
                     document.getElementById('tblImg').src=tblImg[img]
-                    document.getElementById('info').innerHTML=(img+1) + "/5"
+                    document.getElementById('info').innerHTML=(img+1) + "•5"
                     return;
                 }
                 document.getElementById('tblImg').src=tblImg[img]
-                document.getElementById('info').innerHTML=(img+1) + "/5"
+                document.getElementById('info').innerHTML=(img+1) + "•5"
                 return;
             }
 
@@ -52,11 +52,11 @@
                 if(img == 5) {
                     img=0
                     document.getElementById('tblImg').src=tblImg[img]
-                    document.getElementById('info').innerHTML=(img+1) + "/5"
+                    document.getElementById('info').innerHTML=(img+1) + "•5"
                     return;
                 }
                 document.getElementById('tblImg').src=tblImg[img]
-                document.getElementById('info').innerHTML=(img+1) + "/5"
+                document.getElementById('info').innerHTML=(img+1) + "•5"
                 return;
             }
 
@@ -86,27 +86,31 @@
             <ul id='list'>
                 <li class="pair"><i class="fas fa-birthday-cake"></i> <b>Alter:</b> Sie ist 69 Jahre alt.</li>
                 <li class="impair"><i class="fas fa-users"></i> <b>Familie: </b>Sie hat zwei Kinder. Sie heißen Julien und Matthieu. Und sie hat einen Ehemann,  Pierre.</li>
-                <li class="pair"><i class="fas fa-volleyball-ball"></i> <b>Hobbys: </b>Sie hat mehrere Hobis: kino, schlafen, essen, radfahren.</li>
+                <li class="pair"><i class="fas fa-volleyball-ball"></i> <b>Hobbys: </b>Sie hat mehrere Hobbys: Kino, schlafen, essen, Rad fahren.</li>
                 <li class="impair"><i class="fas fa-city"></i> <b>Stadt: </b>Sie lebt in Pantin seit ihrer Kindheit.</li> 
             </ul>
             <img src="mindmap.png" alt="mindmap" id="mindmap">
             <p id="text">
                 <br>
-                Wir haben eine Frau befragt. <br>
+                <p class="partie">Wir haben eine Frau befragt. <br>
                 Sie heißt Michelle. <br>
                 Sie ist 69 Jahre alt.<br>
-                Sie hat ein Ehemann: Pierre.<br>
+                    Sie ist am 6. September 1952 geboren.<br><br></p>
+                <p class="partie">Sie hat ein Ehemann: Pierre.<br>
+                Pierre ist 67 Jahre alt.<br>
                 Sie hat zwei Kinder, sie wohnen in Pantin. Sie heißen Julien und Matthieu.<br>
-                Julien ist 21 Jahre alt und Matthieu ist 16 Jahre alt. <br>
-                Michelle lebt seit ihrer Kindheit in Pantin und liebt diese Stadt.<br>
-                Sie geht oft in das Kino 104 und spaziert oft am Kanal entlang.
+                    Julien ist 21 Jahre alt und Matthieu ist 16 Jahre alt. <br><br></p>
+                <p id="fin">Michelle lebt seit ihrer Kindheit in Pantin und liebt diese Stadt.<br>
+                Sie spaziert oft am Kanal entlang.<br>
+                Sie geht oft in das Kino 104, in den Salle Jacques Brel, in das Dynamo und in das Théâtre au fil de l’eau.<br>
+                Am Dienstagabend und Donnerstagabend macht sie Yoga, und am Freitagnachmittag Tango mit Pierre. </p>
             </p>
             <h3 id='orte'>Beliebte Orte</h3>
             <section class="slider-container"> 
                 <div class="fleches">
                     <div class="fleche" id="fleche-haut" onclick="haut()"><i class="fas fa-arrow-circle-up"></i></div>
                     <div class="fleche" id="fleche-bas" onclick="bas()"><i class="fas fa-arrow-circle-down"></i></div><br>
-                    <div class="fleche" id="info">1/5</div>
+                    <div class="fleche" id="info">1•5</div>
                 </div>
                 <div class="slider">
                     <div class="slides">
@@ -356,7 +360,7 @@
                 /* width: 525px; 
                 height: 291px;  */
                 scroll-snap-type: y mandatory;
-                /* border-radius: 50px; */
+                border-radius: 100px;
             }
 
             section.slider-container > div.fleches > * {
@@ -384,6 +388,20 @@
             #orte {
                 font-size: 30px;
                 font-family: Arial;
+                text-align: center;
+            }
+            #info {
+                font-family: monospace;
+            }
+            p.partie {
+                font-family: 'Urbanist';
+                font-size: 21pt;
+                text-align: center;
+                border-bottom: 5px solid #b86630;
+            }
+            p#fin {
+                font-family: 'Urbanist';
+                font-size: 21pt;
                 text-align: center;
             }
         </style> 
