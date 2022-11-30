@@ -39,24 +39,24 @@
                 if(img == -1) {
                     img=4
                     document.getElementById('tblImg').src=tblImg[img]
-                    document.getElementById('info').innerHTML=(img+1) + "•5"
+                    document.getElementById('info').innerHTML=(img+1) + "•" + (tblImg.length)
                     return;
                 }
                 document.getElementById('tblImg').src=tblImg[img]
-                document.getElementById('info').innerHTML=(img+1) + "•5"
+                document.getElementById('info').innerHTML=(img+1) + "•" + (tblImg.length)
                 return;
             }
 
             function bas() {
                 img++
-                if(img == 5) {
+                if(img == (tblImg.length)) {
                     img=0
                     document.getElementById('tblImg').src=tblImg[img]
-                    document.getElementById('info').innerHTML=(img+1) + "•5"
+                    document.getElementById('info').innerHTML=(img+1) + "•" + (tblImg.length)
                     return;
                 }
                 document.getElementById('tblImg').src=tblImg[img]
-                document.getElementById('info').innerHTML=(img+1) + "•5"
+                document.getElementById('info').innerHTML=(img+1) + "•" + (tblImg.length)
                 return;
             }
 
